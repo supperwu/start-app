@@ -7,6 +7,11 @@ import Profile from './Profile';
 function StarRating({ totalStars = 5, style = {}, ...props }) {
   const [selectedStars, setSelectedStars] = useState(0);
   const stars = createArray(totalStars);
+  const resetButtonContent = "Reset";
+
+  function onResetClick() {
+    setSelectedStars(0);
+  }
 
   return (
     <div style={{ ...style }} {...props}>
@@ -21,7 +26,7 @@ function StarRating({ totalStars = 5, style = {}, ...props }) {
       <p>
         {selectedStars} of {totalStars} stars
       </p>
-      <MyButton />
+      <MyButton content={resetButtonContent} onClick={onResetClick}/>
       <hr />
       <Profile />
     </div>

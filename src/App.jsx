@@ -6,7 +6,7 @@ function App() {
     <StarRating
       style={{ padding: '10px', backgroundColor: 'lightblue' }}
       totalStars={6}
-      onDoubleClick={() => alert('Double clicked!')}
+      onDoubleClick={() => console.log('Double clicked!')}
     />
   )
 }
