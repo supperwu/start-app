@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { createArray } from './lib';
 import Star from './star';
 import MyButton from './MyButton';
+import Profile from './Profile';
 
 function StarRating({ totalStars = 5, style = {}, ...props }) {
   const [selectedStars, setSelectedStars] = useState(0);
@@ -20,7 +21,9 @@ function StarRating({ totalStars = 5, style = {}, ...props }) {
       <p>
         {selectedStars} of {totalStars} stars
       </p>
-      <MyButton />  
+      <MyButton /> 
+      <hr />
+      <Profile /> 
     </div>
   );
 }
