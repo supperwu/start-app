@@ -9,7 +9,7 @@ function StarRating({ totalStars = 5, style = {}, ...props }) {
   const stars = createArray(totalStars);
 
   return (
-    <div style={{ ...style }} {...props}>  
+    <div style={{ ...style }} {...props}>
       {/* _n 为当前元素值，这里都是undefined, 我们使用不到 */}
       {stars.map((_n, i) => (
         <Star
@@ -21,9 +21,9 @@ function StarRating({ totalStars = 5, style = {}, ...props }) {
       <p>
         {selectedStars} of {totalStars} stars
       </p>
-      <MyButton /> 
+      <MyButton />
       <hr />
-      <Profile /> 
+      <Profile />
     </div>
   );
 }
