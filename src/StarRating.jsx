@@ -3,6 +3,7 @@ import { createArray } from './lib';
 import Star from './star';
 import MyButton from './MyButton';
 import Profile from './Profile';
+import Parent from './LifecycleDemo';
 
 function StarRating({ totalStars = 5, style = {}, ...props }) {
   const [selectedStars, setSelectedStars] = useState(0);
@@ -29,6 +30,8 @@ function StarRating({ totalStars = 5, style = {}, ...props }) {
       <MyButton content={resetButtonContent} onClick={onResetClick}/>
       <hr />
       <Profile />
+      <hr/>
+      <Parent name="Alice" />
     </div>
   );
 }
