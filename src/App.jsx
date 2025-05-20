@@ -1,13 +1,12 @@
-import StarRating from './StarRating'
+import React, { useState } from "react";
+import colorData from './colororganizer/color-data.json'
+import ColorList from './colororganizer/ColorList'
 import './App.css'
 
 function App() {
+  const [colors, setColors] = useState(colorData)
   return (
-    <StarRating
-      style={{ padding: '10px', backgroundColor: 'lightblue' }}
-      totalStars={6}
-      onDoubleClick={() => console.log('Double clicked!')}
-    />
+    <ColorList colors={colors} />
   )
 }
 
