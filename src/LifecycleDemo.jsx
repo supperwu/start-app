@@ -28,7 +28,8 @@ import React, { useState, useEffect } from 'react';
 // }
 
 function LifecycleDemo({ name }) {
-  // 1. 挂载阶段
+  // 1. 挂载阶段 
+  // 当组件被添加到 DOM 的时候，React 将运行 setup 函数 
   useEffect(() => {
     console.log('组件挂载：只执行一次');
 

@@ -4,6 +4,7 @@ import Star from './star';
 import MyButton from './MyButton';
 import Profile from './Profile';
 import Parent from './LifecycleDemo';
+import TimerDemo from './TimerDemo';
 
 function StarRating({ totalStars = 5, style = {}, ...props }) {
   const [selectedStars, setSelectedStars] = useState(0);
@@ -32,6 +33,9 @@ function StarRating({ totalStars = 5, style = {}, ...props }) {
       <Profile />
       <hr/>
       <Parent name="Alice" />
+
+      <hr/>
+      <TimerDemo />
     </div>
   );
 }
