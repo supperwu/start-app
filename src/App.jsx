@@ -5,8 +5,28 @@ import './App.css'
 
 function App() {
   const [colors, setColors] = useState(colorData)
+
+  const removeColor = (id) => {
+    const newColors = colors.filter(color => color.id !== id);
+    setColors(newColors);
+  }
+
+  const rateColor = (id, rating) => {
+    const newColors = colors.map(color => {
+      if (color.id === id) {
+        return { ...color, rating }
+      }
+      return color;
+    });
+    setColors(newColors);
+  }
+
   return (
-    <ColorList colors={colors} />
+    <ColorList
+      colors={colors}
+      onRemove={removeColor}
+      onRateColor={rateColor}
+    />
   )
 }
 
