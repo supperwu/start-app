@@ -3,6 +3,7 @@ import colorData from './colororganizer/color-data.json'
 import ColorList from './colororganizer/ColorList'
 import AddColorForm from './colororganizer/AddColorForm'
 import './App.css'
+import { v4 } from "uuid";
 
 function App() {
   const [colors, setColors] = useState(colorData)
@@ -22,10 +23,23 @@ function App() {
     setColors(newColors);
   }
 
+  const createColor = (title, color) => {
+    const newColors = [
+      ...colors,
+      {
+        id: v4(),
+        rating: 0,
+        title,
+        color
+      }
+    ];
+    setColors(newColors);
+  };
+
   return (
     <>
       <AddColorForm
-        onNewColor={(title, color) => alert(`TODO: Create ${title} - ${color}`)}
+        onNewColor={createColor}
       />
       <ColorList
         colors={colors}
