@@ -1,3 +1,4 @@
+/*
 import React, { useState } from "react";
 import colorData from './colororganizer/color-data.json'
 import ColorList from './colororganizer/ColorList'
@@ -48,6 +49,20 @@ function App() {
       />
     </>
   )
+}
+*/
+
+import React, { useState } from "react";
+import ColorList from "./colororganizer/ColorList";
+import AddColorForm from "./colororganizer/AddColorForm";
+
+function App() {
+  return (
+    <>
+      <AddColorForm />
+      <ColorList />
+    </>
+  );
 }
 
 export default App
