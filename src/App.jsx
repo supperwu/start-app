@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import colorData from './colororganizer/color-data.json'
 import ColorList from './colororganizer/ColorList'
+import AddColorForm from './colororganizer/AddColorForm'
 import './App.css'
 
 function App() {
@@ -22,11 +23,16 @@ function App() {
   }
 
   return (
-    <ColorList
-      colors={colors}
-      onRemove={removeColor}
-      onRateColor={rateColor}
-    />
+    <>
+      <AddColorForm
+        onNewColor={(title, color) => alert(`TODO: Create ${title} - ${color}`)}
+      />
+      <ColorList
+        colors={colors}
+        onRemove={removeColor}
+        onRateColor={rateColor}
+      />
+    </>
   )
 }
 
